@@ -1,0 +1,18 @@
+{
+  "series": {
+    "name": "Anterior cruciate ligament (ACL) rehab",
+    "done-treatments": 8,
+    "remain-treatments": 12,
+    "total-treatments": 20
+  },
+  "treatments": {
+    "name": "Dynamic prone plank",
+    "done-step": 8,
+    "total-step": 20,
+    "video": "video.mp4"
+  },
+  "steps": {
+    "duration": "05:36",
+    "image": "src"
+  }
+}
