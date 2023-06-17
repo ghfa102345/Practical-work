@@ -1,0 +1,12 @@
+@function subtractPercentage($number, $percentage) {
+    @return $number - ($number * $percentage / 100);
+}
+
+@mixin setBlockSize($width, $height, $percentage) {
+    width: #{subtractPercentage($width, $percentage)}px;
+    height: #{subtractPercentage($height, $percentage)}px;
+}
+
+@function adaptiveSize($min, $max, $maxScreen, $minScreen) {
+    @return calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$minScreen}px) / (#{$maxScreen} - #{$minScreen})));
+}
