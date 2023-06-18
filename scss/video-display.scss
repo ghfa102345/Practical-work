@@ -165,16 +165,8 @@
 }
 
 .navigation {
-    margin-top: 48px;
     @include navigation;
 }
-
-// Adaptive
-// @media screen and (max-width: 1280px) {
-//     .video-info__description {
-//         width: 95%;
-//     }
-// }
 
 @media screen and (max-width: 1024px) {
     .video-player {
@@ -209,6 +201,10 @@
 @media screen and (max-width: 480px) {
     html {
         font-size: 14px;
+    }
+
+    .video-block__row {
+        margin-bottom: 50px;
     }
 }
 
