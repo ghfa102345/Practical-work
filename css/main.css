@@ -157,7 +157,6 @@
   display: none;
   -webkit-transition: background 0.1s ease;
   transition: background 0.1s ease;
-  cursor: pointer;
 }
 .hamburger-menu:hover .hamburger-menu__line, .hamburger-menu:focus-within .hamburger-menu__line {
   background: #58585D;
@@ -171,6 +170,7 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  cursor: pointer;
 }
 .hamburger-menu__checkbox:checked ~ .hamburger-menu__label .hamburger-menu__line:nth-child(1) {
   -webkit-transform: rotate(45deg);

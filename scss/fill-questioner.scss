@@ -1,5 +1,9 @@
 @import "mixins-and-functions.scss";
 
+.body {
+    min-width: 320px;
+}
+
 .questionnaire {
     padding: 0 16px;
 
@@ -25,6 +29,7 @@
         margin-bottom: 100px;
         display: flex;
         justify-content: space-between;
+        gap: 20px;
     }
 
     &__section {
@@ -115,9 +120,9 @@
         padding: 0;
     }
 
-    html {
-        font-size: 15px;
-    }
+    // html {
+    //     font-size: 15px;
+    // }
 }
 
 @media screen and (max-width: 600px) {
@@ -125,22 +130,33 @@
         aspect-ratio: 4/3;
     }
 
+    .questionnaire__content {
+        flex-direction: column;
+    }
+
+    .therapist-info {
+        align-items: flex-start;
+    }
+
     html {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
 @media screen and (max-width: 480px) {
     html {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 375px) {
-    .questionnaire__link {
-        width: 15.75rem;
-        font-size: 1.125rem;
-        padding: 0.625rem;
+    // .questionnaire__link {
+    //     width: 15.75rem;
+    //     font-size: 1.125rem;
+    //     padding: 0.625rem;
+    // }
+    html {
+        font-size: 13px;
     }
 }
 
