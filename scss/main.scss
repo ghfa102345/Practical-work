@@ -271,7 +271,7 @@ $HeaderLogoHeight: 23;
     .header {
         &__logo {
             display: block;
-            @include setBlockSize($HeaderLogoWidth, $HeaderLogoHeight, 25);
+            @include setBlockSize($HeaderLogoWidth, $HeaderLogoHeight, 20);
         }
 
         &__wrapper {
