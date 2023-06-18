@@ -1,4 +1,79 @@
+.questionnaire {
+  padding: 0 16px;
+}
+.questionnaire__fill {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.65)), to(rgba(255, 255, 255, 0.65))), url("../images/fill-questioner-image.jpg");
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/fill-questioner-image.jpg");
+  background-position: center 45%;
+  background-size: cover;
+  border: 1px solid #8E8E93;
+  border-radius: 8px;
+  width: 100%;
+  aspect-ratio: 16/7.35;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 24px;
+}
+.questionnaire__link {
+  display: block;
+  width: 17.5rem;
+  padding: 0.875rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+  background: #121212;
+  border-radius: 3.063rem;
+  -webkit-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in;
+}
+.questionnaire__link:hover, .questionnaire__link:focus {
+  background: #303030;
+}
+.questionnaire__content {
+  margin-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.questionnaire__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.questionnaire__title {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #121212;
+  margin-bottom: 8px;
+}
+.questionnaire__series {
+  color: #000000;
+}
+.questionnaire__treatment {
+  color: #121212;
+}
+
 .navigation {
+  margin-top: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,10 +133,6 @@
   color: #3B7EFF;
 }
 
-.navigation {
-  margin-top: 48px;
-}
-
 .therapist-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,82 +185,41 @@
   color: #3B7EFF;
 }
 
-.questionnaire {
-  padding: 0 1rem;
+@media screen and (max-width: 1024px) {
+  .questionnaire__fill {
+    aspect-ratio: 16/9;
+  }
 }
-.questionnaire__fill {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.65)), to(rgba(255, 255, 255, 0.65))), url("../images/fill-questioner-image.jpg");
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/fill-questioner-image.jpg");
-  background-position: center 45%;
-  background-size: cover;
-  border: 1px solid #8E8E93;
-  border-radius: 8px;
-  width: 100%;
-  aspect-ratio: 16/7.35;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 24px;
-}
-.questionnaire__link {
-  display: block;
-  width: 17.5rem;
-  padding: 0.875rem;
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 1.25rem;
-  text-align: center;
-  background: #121212;
-  border-radius: 3.063rem;
-  -webkit-transition: background 0.2s ease;
-  transition: background 0.2s ease;
-}
-.questionnaire__link:hover, .questionnaire__link:focus {
-  background: #303030;
-}
-.questionnaire__content {
-  margin-bottom: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.questionnaire__section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 8px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.questionnaire__title {
-  font-weight: 500;
-  font-size: 2rem;
-  color: #121212;
-  margin-bottom: 8px;
-}
-.questionnaire__series {
-  color: #000000;
-}
-.questionnaire__treatment {
-  color: #121212;
-}
-
 @media screen and (max-width: 768px) {
+  .questionnaire {
+    padding: 0;
+  }
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
   .questionnaire__fill {
     aspect-ratio: 4/3;
+  }
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .questionnaire__link {
+    width: 15.75rem;
+    font-size: 1.125rem;
+    padding: 0.625rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 12px;
   }
 }

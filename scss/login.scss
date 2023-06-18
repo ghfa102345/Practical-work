@@ -11,7 +11,7 @@ $loginContainerHeight: 808;
     justify-content: center;
     background-color: #FBFBFD;
     padding: 15px;
-    min-width: 300px;
+    min-width: 320px;
 }
 
 .login {
@@ -125,7 +125,6 @@ $loginContainerHeight: 808;
         font-weight: 600;
         font-size: 1.25rem;
         width: 100%;
-        // padding: 0.875rem 0;
         border-radius: 2.5rem;
         margin-top: 2.5rem;
     }
@@ -141,6 +140,8 @@ $loginContainerHeight: 808;
         }
     }
 }
+
+// Adaptive
 
 @media(max-width: 1600px) or (max-height: 1079px) {
     .login__container {
@@ -181,16 +182,23 @@ $loginContainerHeight: 808;
 }
 
 @media(max-width: 1100px) or (max-height: 780px) {
-    .login__container {
-        @include setBlockSize($loginContainerWidth, $loginContainerHeight, 40);
-    }
+    .login {
+        &__container {
+            @include setBlockSize($loginContainerWidth, $loginContainerHeight, 40);
+        }
 
-    .login::before {
-        @include setBlockSize($loginBeforeWidth, $loginBeforeHeight, 40);
-    }
+        &::before {
+            @include setBlockSize($loginBeforeWidth, $loginBeforeHeight, 40);
+        }
 
-    .login__right {
-        padding: 1.875rem 1.438rem;
+        &__right {
+            padding: 1.875rem 1.438rem;
+        }
+
+        &__help,
+        &__forgot-password {
+            font-size: 1rem;
+        }
     }
 
     html {
@@ -221,9 +229,9 @@ $loginContainerHeight: 808;
     }
 }
 
-@media(max-width: 370px) {
+@media(max-width: 360px) {
     html {
-        font-size: 10.5px;
+        font-size: 10px;
     }
 
     .login__container {

@@ -10,7 +10,7 @@
           justify-content: center;
   background-color: #FBFBFD;
   padding: 15px;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 .login {
@@ -212,6 +212,9 @@
   .login__right {
     padding: 1.875rem 1.438rem;
   }
+  .login__help, .login__forgot-password {
+    font-size: 1rem;
+  }
   html {
     font-size: 11px;
   }
@@ -235,9 +238,9 @@
     width: 100%;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 360px) {
   html {
-    font-size: 10.5px;
+    font-size: 10px;
   }
   .login__container {
     height: -webkit-fit-content;
