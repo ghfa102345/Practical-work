@@ -1,5 +1,5 @@
 .video-block {
-  padding: 0 1rem;
+  padding: 0 16px;
 }
 .video-block__row {
   margin-bottom: 100px;
@@ -236,8 +236,47 @@
   color: #3B7EFF;
 }
 
-@media screen and (max-width: 768px) {
-  .video-player {
+@media screen and (max-width: 1024px) {
+  .video-block {
     aspect-ratio: 16/9;
+  }
+}
+@media screen and (max-width: 768px) {
+  .video-block {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .video-block {
+    aspect-ratio: 4/3;
+  }
+  .video-block__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .therapist-info {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 12px;
   }
 }

@@ -1,7 +1,7 @@
 @import "mixins-and-functions.scss";
 
 .video-block {
-    padding: 0 1rem;
+    padding: 0 16px;
 
     &__row {
         margin-bottom: 100px;
@@ -159,8 +159,52 @@
     @include navigation;
 }
 
-@media screen and (max-width: 768px) {
-    .video-player {
+// Adaptive
+
+@media screen and (max-width: 1024px) {
+    .video-block {
         aspect-ratio: 16/9;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-block {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .video-block {
+        aspect-ratio: 4/3;
+    }
+
+    .video-block__row  {
+        flex-direction: column;
+    }
+
+    .therapist-info {
+        align-items: flex-start;
+    }
+
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 12px;
     }
 }

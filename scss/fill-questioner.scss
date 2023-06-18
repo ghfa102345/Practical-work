@@ -105,24 +105,17 @@
 }
 
 // Adaptive
+
 @media screen and (max-width: 1024px) {
     .questionnaire__fill {
         aspect-ratio: 16/9;
     }
-
-    // html {
-    //     font-size: 15px;
-    // }
 }
 
 @media screen and (max-width: 768px) {
     .questionnaire {
         padding: 0;
     }
-
-    // html {
-    //     font-size: 15px;
-    // }
 }
 
 @media screen and (max-width: 600px) {
@@ -150,11 +143,6 @@
 }
 
 @media screen and (max-width: 375px) {
-    // .questionnaire__link {
-    //     width: 15.75rem;
-    //     font-size: 1.125rem;
-    //     padding: 0.625rem;
-    // }
     html {
         font-size: 13px;
     }
