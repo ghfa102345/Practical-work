@@ -1,5 +1,9 @@
 @import "mixins-and-functions.scss";
 
+.body {
+    min-width: 320px;
+}
+
 .progress-bar-with-caption {
     .progress-bar {
         @include progress-bar();
@@ -14,6 +18,7 @@
 
 .stats {
     @include stats;
+    flex-wrap: wrap;
 }
 
 .video-player {
@@ -28,7 +33,7 @@
 
 .info-section {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     justify-content: space-between;
     background: #FFFFFF;
     border-radius: 0.5rem;
@@ -71,44 +76,6 @@
         font-size: 0.875rem;
         color: #58585D;
     }
-  
-    // &__therapist-details {
-    //     display: flex;
-    //     gap: 1.063rem;
-    //     align-items: center;
-    // }
-  
-    // &__therapist-label {
-    //     font-weight: 500;
-    //     color: #121212;
-    //     white-space: nowrap;
-    // }
-  
-    // &__therapist-name {
-    //     color: #3B7EFF;
-    //     font-weight: 600;
-    // }
-  
-    // &__therapist-contact {
-    //     display: flex;
-    //     gap: 0.625rem;
-    //     align-items: center;
-    //     width: fit-content;
-    //     white-space: nowrap;
-    //     font-weight: 500;
-    //     border-radius: 1.875rem;
-    //     padding: 0.375rem 0.75rem;
-    //     background: #EBEBF0;
-    //     transition: color 0.1s ease;
-  
-    //     &::before {
-    //         content: "";
-    //         width: 0.438rem;
-    //         height: 0.438rem;
-    //         border-radius: 50%;
-    //         background: #3B7EFF;
-    //     }
-    // }
   
     &__series {
         display: flex;
@@ -277,6 +244,7 @@
     gap: 10px;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     &__info {
         font-size: 1rem;
@@ -297,5 +265,68 @@
 
     &__continue-link {
         @include black-button();
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container {
+        gap: 32px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .info-section {
+        flex-direction: column;
+    }
+
+    .therapist-info {
+        flex-wrap: wrap;
+    }
+
+    .info-section__series {
+        width: unset;
+    }
+
+    .video-player {
+        aspect-ratio: 16/7;
+    }
+}
+
+// @media screen and (max-width: 768px) {
+// }
+
+@media screen and (max-width: 600px) {
+    .video-player {
+        aspect-ratio: 4/2;
+    }
+
+    .series-details__title {
+        flex-wrap: wrap-reverse;
+    }
+
+    .info-section {
+        gap: 20px;
+    }
+
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 11px;
     }
 }

@@ -1,5 +1,9 @@
 @import "mixins-and-functions.scss";
 
+.body {
+    min-width: 320px;
+}
+
 .video-block {
     padding: 0 16px;
 
@@ -204,7 +208,7 @@
     }
 
     .video-block__row {
-        margin-bottom: 80px;
+        margin-bottom: 70px;
     }
 }
 

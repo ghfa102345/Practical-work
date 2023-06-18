@@ -388,9 +388,6 @@
   .header__show-search, .header__search--open {
     display: block !important;
   }
-  .header__input, .header__search {
-    width: 100%;
-  }
 }
 @media screen and (max-width: 480px) {
   .header__logo {
@@ -400,6 +397,9 @@
   }
   .header__wrapper {
     gap: 15px;
+  }
+  .header__input, .header__search {
+    width: 100%;
   }
   .sidebar {
     width: 100%;

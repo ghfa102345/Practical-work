@@ -1,3 +1,7 @@
+.body {
+  min-width: 320px;
+}
+
 .video-block {
   padding: 0 16px;
 }
@@ -274,7 +278,7 @@
     font-size: 14px;
   }
   .video-block__row {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
 }
 @media screen and (max-width: 375px) {

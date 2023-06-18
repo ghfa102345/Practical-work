@@ -236,7 +236,7 @@
         background: transparent;
 
         .material-symbols-outlined {
-            font-size: adaptiveSize(subtractPercentage(116, 60), 116, 1520, 320);
+            font-size:  clamp(50px, 6.04vw, 116px);
         }
 
         &:hover {
