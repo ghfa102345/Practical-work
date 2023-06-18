@@ -68,6 +68,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.video-info__section {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 .video-info__section:nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +106,8 @@
   font-weight: 500;
 }
 .video-info__description {
-  width: 56%;
+  width: 90%;
+  max-width: 787px;
   margin: 4px 0 2px;
 }
 .video-info__related {
@@ -237,7 +242,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .video-block {
+  .video-player {
     aspect-ratio: 16/9;
   }
 }
@@ -247,7 +252,7 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .video-block {
+  .video-player {
     aspect-ratio: 4/3;
   }
   .video-block__row {
