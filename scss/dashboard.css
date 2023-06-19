@@ -1,0 +1,443 @@
+.body {
+  min-width: 320px;
+}
+
+.progress-bar-with-caption .progress-bar__container {
+  width: 100%;
+  height: 3px;
+  margin: 4px 0;
+  background: #EBEBF0;
+}
+.progress-bar-with-caption .progress-bar__line {
+  width: 40%;
+  height: 100%;
+  background: #3B7EFF;
+}
+.progress-bar-with-caption .progress-bar__line::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -60%;
+  left: 99%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3B7EFF;
+}
+.progress-bar-with-caption__caption {
+  font-weight: 400;
+  font-size: 14px;
+  color: #58585D;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+.stats__headline {
+  font-size: 1rem;
+  color: #121212;
+}
+.stats__progress-group {
+  display: flex;
+  gap: 0.75rem;
+}
+.stats__progress {
+  font-size: 1.25rem;
+  color: #121212;
+  padding: 0.5rem;
+  background: #EFEFFF;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 0.5rem;
+}
+.stats__progress-number {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #3B7EFF;
+}
+.stats__progress-number-black {
+  color: #121212;
+}
+
+.video-player {
+  margin-bottom: 24px;
+  position: relative;
+  aspect-ratio: 16/4.61;
+  max-width: 100%;
+  width: auto;
+}
+.video-player__element {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.video-player__element--no-controls::-webkit-media-controls {
+  display: none;
+}
+.video-player__button {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.video-player__button .material-symbols-outlined {
+  font-size: clamp(50px, 6.04vw, 116px);
+}
+.video-player__button:hover {
+  color: #58585D;
+}
+.video-player__caption {
+  position: absolute;
+  padding: 0.375rem 0.75rem;
+  background: #EBEBF0;
+  border-radius: 1.875rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #121212;
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 1rem;
+  bottom: 1rem;
+}
+.video-player__caption::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #3B7EFF;
+}
+
+.container {
+  display: flex;
+  gap: 47px;
+  flex-direction: column;
+}
+
+.info-section {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+.info-section__therapist {
+  display: flex;
+  gap: 1.5rem;
+  flex: 35%;
+  white-space: nowrap;
+}
+.info-section__user-photo {
+  width: 6rem;
+  height: 6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 0.5rem;
+  flex: 0 0 auto;
+}
+.info-section__therapist-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.438rem;
+}
+.info-section__welcome {
+  font-weight: 500;
+  font-size: 2.25rem;
+  color: #121212;
+  font-style: italic;
+}
+.info-section__user-name {
+  color: #3B7EFF;
+}
+.info-section__last-visited {
+  font-size: 0.875rem;
+  color: #58585D;
+}
+.info-section__series {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 53.63%;
+}
+.info-section__series-text {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #121212;
+}
+.info-section__series-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.info-section__active-series {
+  display: flex;
+  gap: 0.25rem;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 400px;
+}
+.info-section__active-series-count {
+  color: #3B7EFF;
+}
+.info-section__treatments-number {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: linear-gradient(0deg, #383838, #383838), linear-gradient(90deg, #FF5858 0%, #F09819 100%), linear-gradient(90deg, #868F96 0%, #596164 100%);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #FFFFFF;
+  padding: 0.75rem 1.09375rem;
+}
+.info-section__series-details {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.4375rem 0.75rem;
+}
+.info-section__series-name {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  color: #121212;
+}
+.info-section__treatments-count {
+  font-size: 1rem;
+  color: #58585D;
+}
+
+.therapist-info {
+  display: flex;
+  gap: 1.063rem;
+  align-items: center;
+}
+.therapist-info__label {
+  font-weight: 500;
+  color: #121212;
+  white-space: nowrap;
+}
+.therapist-info__name {
+  color: #3B7EFF;
+  font-weight: 600;
+}
+.therapist-info__contact-link {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  font-weight: 500;
+  border-radius: 1.875rem;
+  padding: 0.375rem 0.75rem;
+  background: #EBEBF0;
+  transition: color 0.1s ease;
+}
+.therapist-info__contact-link::before {
+  content: "";
+  width: 0.438rem;
+  height: 0.438rem;
+  border-radius: 50%;
+  background: #3B7EFF;
+}
+.therapist-info__contact-link:focus, .therapist-info__contact-link:hover {
+  color: #3B7EFF;
+}
+
+.progress-sections {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 15px 24px;
+}
+
+.progress-section__progress-bar-text {
+  color: #58585D;
+}
+.progress-section__current-treatment {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #121212;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.series-details {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0.938rem;
+  padding-bottom: 1.313rem;
+  border-bottom: 1px solid #EBEBF0;
+}
+.series-details__title {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+}
+.series-details__link {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #3B7EFF;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 2px solid #3B7EFF;
+  border-radius: 2.625rem;
+  padding: 0.75rem 0.938rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: color 0.2s ease;
+}
+.series-details__link::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #3B7EFF;
+}
+.series-details__link:hover {
+  color: #58585D;
+}
+.series-details__subtitle {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.next-step {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #121212;
+  margin-bottom: 7px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.next-step__title {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #121212;
+}
+.next-step__link {
+  color: #58585D;
+  font-size: 1rem;
+}
+.next-step__link:hover, .next-step__link:focus {
+  text-decoration: underline;
+}
+
+.step-details {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.step-details__info {
+  font-size: 1rem;
+  color: #FFFFFF;
+  padding: 8px;
+  background: #58585D;
+  border-radius: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.step-details__number {
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.step-details__continue-link {
+  display: block;
+  width: 17.5rem;
+  padding: 0.875rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+  background: #121212;
+  border-radius: 3.063rem;
+  transition: background 0.2s ease-in;
+}
+.step-details__continue-link:hover, .step-details__continue-link:focus {
+  background: #303030;
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .info-section {
+    flex-direction: column;
+  }
+  .therapist-info {
+    flex-wrap: wrap;
+  }
+  .info-section__series {
+    width: unset;
+  }
+  .video-player {
+    aspect-ratio: 16/7;
+  }
+}
+@media screen and (max-width: 600px) {
+  .video-player {
+    aspect-ratio: 4/2;
+  }
+  .series-details__title {
+    flex-wrap: wrap-reverse;
+  }
+  .info-section {
+    gap: 20px;
+  }
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 11px;
+  }
+}/*# sourceMappingURL=dashboard.css.map */

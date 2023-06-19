@@ -1,0 +1,180 @@
+.body {
+  min-width: 320px;
+}
+
+.questionnaire {
+  padding: 0 16px;
+}
+.questionnaire__fill {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("../images/fill-questioner-image.jpg");
+  background-position: center 45%;
+  background-size: cover;
+  border: 1px solid #8E8E93;
+  border-radius: 8px;
+  width: 100%;
+  aspect-ratio: 16/7.35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.questionnaire__link {
+  display: block;
+  width: 17.5rem;
+  padding: 0.875rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+  background: #121212;
+  border-radius: 3.063rem;
+  transition: background 0.2s ease-in;
+}
+.questionnaire__link:hover, .questionnaire__link:focus {
+  background: #303030;
+}
+.questionnaire__content {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.questionnaire__section {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.questionnaire__title {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #121212;
+  margin-bottom: 8px;
+}
+.questionnaire__series {
+  color: #000000;
+}
+.questionnaire__treatment {
+  color: #121212;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation__back, .navigation__next {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 500;
+}
+.navigation__back .navigation__text {
+  margin-left: 1.5rem;
+}
+.navigation__next .navigation__text {
+  margin-right: 1.5rem;
+}
+.navigation__text {
+  color: #58585D;
+}
+.navigation__button {
+  font-size: 1.5rem;
+  color: #58585D;
+  display: flex;
+  align-items: center;
+  transition: color 0.1s ease;
+}
+.navigation__button--next {
+  justify-content: end;
+}
+.navigation__button--next .material-symbols-outlined {
+  transform: rotate(180deg);
+}
+.navigation__button .material-symbols-outlined {
+  transition: color 0.1s ease;
+}
+.navigation__button:hover, .navigation__button:focus {
+  color: #121212;
+}
+.navigation__button:hover .material-symbols-outlined, .navigation__button:focus .material-symbols-outlined {
+  color: #3B7EFF;
+}
+
+.therapist-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.063rem;
+  align-items: flex-end;
+}
+.therapist-info__label {
+  font-weight: 500;
+  color: #121212;
+  white-space: nowrap;
+}
+.therapist-info__name {
+  color: #3B7EFF;
+  font-weight: 600;
+}
+.therapist-info__contact-link {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  font-weight: 500;
+  border-radius: 1.875rem;
+  padding: 0.375rem 0.75rem;
+  background: #EBEBF0;
+  transition: color 0.1s ease;
+}
+.therapist-info__contact-link::before {
+  content: "";
+  width: 0.438rem;
+  height: 0.438rem;
+  border-radius: 50%;
+  background: #3B7EFF;
+}
+.therapist-info__contact-link:focus, .therapist-info__contact-link:hover {
+  color: #3B7EFF;
+}
+
+@media screen and (max-width: 1024px) {
+  .questionnaire__fill {
+    aspect-ratio: 16/9;
+  }
+}
+@media screen and (max-width: 768px) {
+  .questionnaire {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .questionnaire__fill {
+    aspect-ratio: 4/3;
+  }
+  .questionnaire__content {
+    flex-direction: column;
+  }
+  .therapist-info {
+    align-items: flex-start;
+  }
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=fill-questioner.css.map */
