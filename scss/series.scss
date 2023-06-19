@@ -327,21 +327,6 @@
         }
     }
 
-    .series__info {
-        font-size: 1.75rem;
-    }
-
-    .series__text {
-        gap: 0.5rem;
-    }
-
-    .series__text::before {
-        width: 0.75rem;
-        height: 0.75rem;
-    }
-}
-
-@media screen and (max-width: 1440px) {
     .series__inner {
         min-width: 50%;
         flex: 1;
@@ -350,7 +335,7 @@
     .series__details {
         flex-wrap: wrap;
         align-items: flex-start;
-    }    
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -362,13 +347,65 @@
 
     .progress-display__image-element {
         width: 100%;
-        aspect-ratio: 21/9;
-        border-radius: 8px;
+        aspect-ratio: 21/8;
         object-fit: cover;
-        object-position: 50% 10%;
+        object-position: 50% 15%;
     }
 
-    // .progress-display__title {
+    .progress-display__link {
+        width: 17.5rem;
+        padding: 0.875rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .progress-slider-header__header {
+        display: none;
+    }
+
+    .progress-display__row {
+        gap: 15px;
+    }
+
+    .progress-display__image-element {
+        aspect-ratio: 21/9;
+    }
+
+    .stats,
+    .therapist-info {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .series__info {
+        display: block;
+    }
+
+    .series__text {
+        float: left;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+  // .progress-display__title {
     //     font-size: 1.5rem;
     // }
 
@@ -399,34 +436,106 @@
     //     border-radius: 8px;
     //     margin: 12px 0 5px;
     // }
-}
 
-@media screen and (max-width: 768px) {
-    .stats__progress-number,
-    .progress-slider-header__number {
-        font-size: 2rem;
-    }
+    // .series__info {
+    //     font-size: 1.75rem;
+    // }
 
-    .stats__progress,
-    .progress-slider-header__header {
-        font-size: 1rem;
-    }
+    // .series__text {
+    //     gap: 0.5rem;
+    // }
 
-    .progress-display__info {
-        margin-bottom: 70px;
-    }
+    // .series__text::before {
+    //     width: 0.75rem;
+    //     height: 0.75rem;
+    // }
 
-    .progress-slider-header__header {
-        left: 50px;
-    }
+// @media screen and (max-width: 1440px) {
+//     .series__inner {
+//         min-width: 50%;
+//         flex: 1;
+//     }
 
-    html {
-        font-size: 15px;
-    }
-}
+//     .series__details {
+//         flex-wrap: wrap;
+//         align-items: flex-start;
+//     }    
+// }
 
-@media screen and (max-width: 480px) {
-    html {
-        font-size: 12px;
-    }
-}
+// @media screen and (max-width: 1024px) {
+//     .progress-display__row {
+//         flex-direction: column;
+//         align-items: flex-start;
+//         gap: 30px;
+//     }
+
+//     .progress-display__image-element {
+//         width: 100%;
+//         aspect-ratio: 21/9;
+//         border-radius: 8px;
+//         object-fit: cover;
+//         object-position: 50% 10%;
+//     }
+
+//     // .progress-display__title {
+//     //     font-size: 1.5rem;
+//     // }
+
+//     // .progress-slider-header__header {
+//     //     font-size: 1rem;
+//     //     bottom: 2.75rem;
+//     // }
+
+//     // .progress-slider-header__number {
+//     //     font-size: 2rem;
+//     // }
+
+//     // .progress-slider__item {
+//     //     font-size: 1em;
+//     // }
+
+//     // .progress-slider {
+//     //     display: -webkit-box;
+//     //     display: -ms-flexbox;
+//     //     display: flex;
+//     //     gap: 12px;
+//     //     -webkit-box-align: center;
+//     //     -ms-flex-align: center;
+//     //     align-items: center;
+//     //     padding: 0 12px;
+//     //     background: #FFFFFF;
+//     //     border: 1px solid #EBEBF0;
+//     //     border-radius: 8px;
+//     //     margin: 12px 0 5px;
+//     // }
+// }
+
+// @media screen and (max-width: 768px) {
+//     .stats__progress-number,
+//     .progress-slider-header__number {
+//         font-size: 2rem;
+//     }
+
+//     .stats__progress,
+//     .progress-slider-header__header {
+//         font-size: 1rem;
+//     }
+
+//     .progress-display__info {
+//         margin-bottom: 70px;
+//     }
+
+//     .progress-slider-header__header {
+//         left: 50px;
+//     }
+
+//     html {
+//         font-size: 15px;
+//     }
+// }
+
+// @media screen and (max-width: 480px) {
+//     html {
+//         font-size: 12px;
+//     }
+// }

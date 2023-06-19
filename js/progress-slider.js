@@ -4,7 +4,7 @@ const arrowButtons = document.querySelectorAll(".progress-slider__button");
 arrowButtons.forEach((arrowButton) => {
     arrowButton.addEventListener("click", () => {
         const sliderBox = arrowButton.closest(".progress-slider").querySelector(".progress-slider__list");
-        sliderBox.scrollLeft += arrowButton.id === "left-button" ? -350 : 350;
+        sliderBox.scrollLeft += arrowButton.id === "left-button" ? -150 : 150;
     });
 });
 
