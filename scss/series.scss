@@ -424,3 +424,9 @@
         font-size: 15px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
