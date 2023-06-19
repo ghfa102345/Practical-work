@@ -270,3 +270,73 @@
         }
     }
 }
+
+@mixin progress-slider() {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 0 12px;
+    background: #FFFFFF;
+    border: 1px solid #EBEBF0;
+    border-radius: 8px;
+    // margin: 19px 0 5px;
+
+    &__button {
+        color: #8E8E93;
+        flex: 0 0 auto;
+        // height: 24px;
+        height: 1.5rem;
+        background: transparent;
+        transition: color 0.1s ease-in;
+
+        .material-symbols-outlined {
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            color: #58585D;
+        }
+    }
+
+    &__list {
+        display: flex;
+        // gap: 48px;
+        gap: 3rem;
+        flex: 0 1 auto;
+        overflow: hidden;
+
+        & .progress-slider__item:not(:first-child).progress-slider__item--active::before {
+            content: "";
+            display: block;
+            position: absolute;
+            // width: 20px;
+            // height: 48px;
+            width: 1.25rem;
+            height: 3rem;
+            background: url("../images/rectangle.png") no-repeat;
+            background-size: cover;
+            background-position: center;
+            top: -14px;
+            left: -31px;
+        }
+    }
+
+    &__item {
+        white-space: nowrap;
+        font-weight: 600;
+        // font-size: 18px;
+        font-size: 1.125rem;
+        color: #121212;
+        // margin: 14px 0;
+        margin: 0.875rem 0;
+
+        &--active {
+            color: #3B7EFF;
+            position: relative;
+
+            & ~ .progress-slider__item {
+                color: #8E8E93;
+            }
+        }
+    }
+}
