@@ -243,6 +243,7 @@
   background: #FFFFFF;
   border: 1px solid #EBEBF0;
   border-radius: 8px;
+  margin-bottom: 8px;
 }
 .progress-slider__button {
   color: #8E8E93;
@@ -336,7 +337,7 @@
 }
 .treatments__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fit, 170px);
   grid-gap: 16px;
 }
 .treatments__show-more {
@@ -467,24 +468,42 @@
   .progress-display__row {
     gap: 15px;
   }
-  .progress-display__image-element {
-    aspect-ratio: 21/9;
+  .progress-display__info {
+    margin-bottom: 15px;
   }
   .stats,
   .therapist-info {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 14px;
+@media screen and (max-width: 600px) {
+  .progress-display__image-element {
+    aspect-ratio: 16/9;
   }
   .series__info {
     display: block;
+    line-height: 2.6rem;
   }
   .series__text {
     float: left;
     margin-right: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  .stats {
+    flex-wrap: wrap;
+  }
+  .stats {
+    gap: 1rem;
+  }
+  .stats__progress {
+    font-size: 1rem;
+  }
+  .stats__progress-number {
+    font-size: 2rem;
   }
 }
 @media screen and (max-width: 375px) {
