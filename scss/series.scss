@@ -142,8 +142,8 @@
 
     &__cards {
         display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-        grid-template-columns: repeat(auto-fit, 170px);
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        // grid-template-columns: repeat(auto-fit, 170px);
         grid-gap: 16px;
     }
 
@@ -177,7 +177,7 @@
 .treatment-card {
     width: 100%;
     min-height: 170px;
-    // max-width: 200px;
+    max-width: 170px;
     border: 1px solid #8E8E93;
     border-radius: 8px;
     overflow: hidden;

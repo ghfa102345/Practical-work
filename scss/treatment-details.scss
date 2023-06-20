@@ -1,5 +1,10 @@
 @import "mixins-and-functions.scss";
 
+.body {
+    min-width: 320px;
+}
+
+
 .container {
     display: flex;
     gap: 16px;
@@ -16,6 +21,7 @@
 
 .progress-slider {
     @include progress-slider();
+    margin-bottom: 8px;
 }
 
 .progress-bar {
@@ -164,8 +170,7 @@
 
     &__cards {
         display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-        grid-template-columns: repeat(auto-fit, 281px);
+        grid-template-columns: repeat(auto-fit, 280px);
         grid-gap: 16px;
     }
 
@@ -198,12 +203,13 @@
 
 .step-card {
     width: 280px;
+    width: 100%;
     min-height: 265px;
     border: 1px solid #8E8E93;
     border-radius: 8px;
     overflow: hidden;
-    justify-self: center;
-    align-self: center;
+    // justify-self: center;
+    // align-self: center;
 
     &--active {
         border: 1px solid #3B7EFF;
@@ -290,7 +296,7 @@
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1440px) {
     .progress-display {
         gap: 12px;
         flex-direction: column;
@@ -315,7 +321,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
     .progress-display__row {
         flex-direction: column;
         align-items: flex-start;
@@ -340,6 +346,26 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .progress-display__info {
+        margin-bottom: 15px;
+    }
+
+    .progress-display__row {
+        gap: 15px;
+    }
+
+    .progress-display__info {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .progress-display__image-element {
+        aspect-ratio: 16/9;
+    }
+}
+
 @media screen and (max-width: 480px) {
     html {
         font-size: 14px;
@@ -348,9 +374,27 @@
     .stats {
         flex-wrap: wrap;
     }
+
+    .stats {
+        gap: 1rem;
+    }
 }
 
 @media screen and (max-width: 375px) {
+    .steps__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 16px;
+    }
+
+    .stats__progress {
+        font-size: 1rem;
+    }
+
+    .stats__progress-number {
+        font-size: 2rem;
+    }
+
     html {
         font-size: 13px;
     }

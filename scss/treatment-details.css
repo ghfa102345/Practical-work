@@ -1,3 +1,7 @@
+.body {
+  min-width: 320px;
+}
+
 .container {
   display: flex;
   gap: 16px;
@@ -127,6 +131,7 @@
   background: #FFFFFF;
   border: 1px solid #EBEBF0;
   border-radius: 8px;
+  margin-bottom: 8px;
 }
 .progress-slider__button {
   color: #8E8E93;
@@ -302,7 +307,7 @@
 }
 .steps__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 281px);
+  grid-template-columns: repeat(auto-fit, 280px);
   grid-gap: 16px;
 }
 .steps__show-more {
@@ -330,12 +335,11 @@
 
 .step-card {
   width: 280px;
+  width: 100%;
   min-height: 265px;
   border: 1px solid #8E8E93;
   border-radius: 8px;
   overflow: hidden;
-  justify-self: center;
-  align-self: center;
 }
 .step-card--active {
   border: 1px solid #3B7EFF;
@@ -414,7 +418,7 @@
   background: #2b64ce;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1440px) {
   .progress-display {
     gap: 12px;
     flex-direction: column;
@@ -435,7 +439,7 @@
     align-items: flex-start;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
   .progress-display__row {
     flex-direction: column;
     align-items: flex-start;
@@ -458,6 +462,22 @@
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 768px) {
+  .progress-display__info {
+    margin-bottom: 15px;
+  }
+  .progress-display__row {
+    gap: 15px;
+  }
+  .progress-display__info {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 600px) {
+  .progress-display__image-element {
+    aspect-ratio: 16/9;
+  }
+}
 @media screen and (max-width: 480px) {
   html {
     font-size: 14px;
@@ -465,8 +485,22 @@
   .stats {
     flex-wrap: wrap;
   }
+  .stats {
+    gap: 1rem;
+  }
 }
 @media screen and (max-width: 375px) {
+  .steps__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+  .stats__progress {
+    font-size: 1rem;
+  }
+  .stats__progress-number {
+    font-size: 2rem;
+  }
   html {
     font-size: 13px;
   }
