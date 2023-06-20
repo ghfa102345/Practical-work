@@ -1,9 +1,5 @@
 @import "mixins-and-functions.scss";
 
-.body {
-    min-width: 320px;
-}
-
 .progress-bar-with-caption {
     .progress-bar {
         @include progress-bar();

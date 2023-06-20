@@ -1,7 +1,3 @@
-.body {
-  min-width: 320px;
-}
-
 .video-block {
   padding: 0 16px;
 }
@@ -107,6 +103,8 @@
 
 .therapist-info {
   display: flex;
+  gap: 1.063rem;
+  align-items: center;
   flex-direction: column;
   gap: 1.063rem;
   align-items: flex-end;

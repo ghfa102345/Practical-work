@@ -377,7 +377,7 @@
 }
 .treatment-card__title {
   font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 20px;
   color: #121212;
   margin-bottom: 8px;
 }
@@ -481,17 +481,17 @@
     aspect-ratio: 16/9;
   }
   .series__info {
-    display: block;
-    line-height: 2.6rem;
-  }
-  .series__text {
-    float: left;
-    margin-right: 5px;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 480px) {
-  html {
-    font-size: 14px;
+  .series__info {
+    font-size: 1.75rem;
+  }
+  .series__text::before {
+    width: 0.875rem;
+    height: 0.875rem;
   }
   .stats {
     flex-wrap: wrap;
@@ -505,10 +505,16 @@
   .stats__progress-number {
     font-size: 2rem;
   }
+  .treatments {
+    margin: 20px 6px 0;
+  }
+  .series__details {
+    margin: 0 6px 8px;
+  }
 }
 @media screen and (max-width: 375px) {
   html {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 320px) {

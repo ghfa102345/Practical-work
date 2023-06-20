@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap');
 
+$contentMinWidth: 320px;
+
 * {
     padding: 0;
     margin: 0;
@@ -33,6 +35,7 @@ ul {
 }
 
 body {
+    min-width: $contentMinWidth;
     min-height: 100vh;
     font-family: 'Archivo', sans-serif;
 }
